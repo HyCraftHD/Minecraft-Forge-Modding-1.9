@@ -1,0 +1,16 @@
+[
+{
+  "modid": "tutorial",
+  "name": "Youtube Tutorial Mod",
+  "description": "Youtube Tutorial Mod by HyCraftHD",
+  "version": "0.1",
+  "mcversion": "1.9",
+  "url": "http://youtube.hycrafthd.de",
+  "updateUrl": "",
+  "authorList": ["HyCraftHD"],
+  "credits": "HyCraftHD",
+  "logoFile": "logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]
