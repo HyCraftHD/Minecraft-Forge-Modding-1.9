@@ -29,6 +29,7 @@ public class TutorialMod {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
+		new TutorialItems();
 	}
 
 	@EventHandler
