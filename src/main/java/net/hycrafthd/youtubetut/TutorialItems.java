@@ -14,11 +14,12 @@ public class TutorialItems {
 	}
 
 	private void init() {
-		tutitem = new ItemTut().setUnlocalizedName("tutitem");
+		tutitem = new ItemTut().setCreativeTab(TutorialMod.tab);
+		TutorialUtils.setNames(tutitem, "tutitem");
 	}
 
 	private void register() {
-		GameRegistry.registerItem(tutitem, tutitem.getUnlocalizedName().substring(5));
+		GameRegistry.register(tutitem);
 	}
 
 }

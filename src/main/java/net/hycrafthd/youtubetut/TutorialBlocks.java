@@ -1,9 +1,8 @@
 package net.hycrafthd.youtubetut;
 
-import com.sun.org.apache.xml.internal.security.Init;
-
 import net.hycrafthd.youtubetut.block.BlockTut;
 import net.minecraft.block.Block;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class TutorialBlocks {
@@ -16,11 +15,17 @@ public class TutorialBlocks {
 	}
 
 	private void init() {
-		tutblock = new BlockTut().setUnlocalizedName("tutblock");
+		tutblock = new BlockTut().setCreativeTab(TutorialMod.tab);
+		TutorialUtils.setNames(tutblock, "tutblock");
 	}
 
 	private void register() {
-		GameRegistry.registerBlock(tutblock, tutblock.getUnlocalizedName().substring(5));
+		this.registerBlock(tutblock);
+	}
+
+	private void registerBlock(Block block) {
+		GameRegistry.register(block);
+		GameRegistry.register(new ItemBlock(block).setUnlocalizedName(block.getUnlocalizedName()).setRegistryName(block.getRegistryName()));
 	}
 
 }

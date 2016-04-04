@@ -1,6 +1,8 @@
 package net.hycrafthd.youtubetut;
 
+import net.hycrafthd.youtubetut.creativetab.CreativeTabTut;
 import net.hycrafthd.youtubetut.proxy.CommonProxy;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -22,6 +24,8 @@ public class TutorialMod {
 
 	@SidedProxy(serverSide = "net.hycrafthd.youtubetut.proxy.CommonProxy", clientSide = "net.hycrafthd.youtubetut.proxy.ClientProxy", modId = MODID)
 	public static CommonProxy PROXY = new CommonProxy();
+	
+	public static CreativeTabs tab;
 
 	@EventHandler
 	public void preinit(FMLPreInitializationEvent event) {
@@ -29,8 +33,11 @@ public class TutorialMod {
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
+		tab = new CreativeTabTut();
 		new TutorialItems();
 		new TutorialBlocks();
+		new TutorialCrafting();
+		new TutorialSmelting();
 	}
 
 	@EventHandler
