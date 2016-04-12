@@ -16,14 +16,11 @@ public class ClientProxy extends CommonProxy {
 	}
 
 	private void registerItemModel(Item item, int meta) {
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(
-				TutorialMod.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(TutorialMod.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
 	}
 
 	private void registerBlockModel(Block block, int meta) {
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), meta,
-				new ModelResourceLocation(TutorialMod.MODID + ":" + block.getUnlocalizedName().substring(5),
-						"inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResourceLocation(TutorialMod.MODID + ":" + block.getUnlocalizedName().substring(5), "inventory"));
 	}
 
 }

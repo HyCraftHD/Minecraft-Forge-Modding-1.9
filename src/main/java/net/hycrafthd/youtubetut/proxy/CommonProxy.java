@@ -1,8 +1,8 @@
 package net.hycrafthd.youtubetut.proxy;
 
 public class CommonProxy {
-	
-	//Client Stuff
+
+	// Client Stuff
 	public void registerModels() {
 	}
 
