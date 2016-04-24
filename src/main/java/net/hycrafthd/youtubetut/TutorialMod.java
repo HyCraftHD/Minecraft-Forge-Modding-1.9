@@ -4,14 +4,12 @@ import net.hycrafthd.youtubetut.creativetab.CreativeTabTut;
 import net.hycrafthd.youtubetut.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 @Mod(modid = TutorialMod.MODID, version = TutorialMod.VERSION)
 public class TutorialMod {
@@ -24,7 +22,10 @@ public class TutorialMod {
 
 	@SidedProxy(serverSide = "net.hycrafthd.youtubetut.proxy.CommonProxy", clientSide = "net.hycrafthd.youtubetut.proxy.ClientProxy", modId = MODID)
 	public static CommonProxy PROXY = new CommonProxy();
-	
+
+	private TutorialCrafting crafting;
+	private TutorialSmelting smelting;
+
 	public static CreativeTabs tab;
 
 	@EventHandler
@@ -36,12 +37,14 @@ public class TutorialMod {
 		tab = new CreativeTabTut();
 		new TutorialItems();
 		new TutorialBlocks();
-		new TutorialCrafting();
-		new TutorialSmelting();
+		crafting = new TutorialCrafting();
+		smelting = new TutorialSmelting();
 	}
 
 	@EventHandler
 	public void postinit(FMLPostInitializationEvent event) {
 		PROXY.registerModels();
+		crafting.unregister();
+		smelting.unregister();
 	}
 }
