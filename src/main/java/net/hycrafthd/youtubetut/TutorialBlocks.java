@@ -1,6 +1,7 @@
 package net.hycrafthd.youtubetut;
 
 import net.hycrafthd.youtubetut.block.BlockTut;
+import net.hycrafthd.youtubetut.util.NameUtil;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -16,7 +17,7 @@ public class TutorialBlocks {
 
 	private void init() {
 		tutblock = new BlockTut().setCreativeTab(TutorialMod.tab);
-		TutorialUtils.setNames(tutblock, "tutblock");
+		NameUtil.setNames(tutblock, "tutblock");
 	}
 
 	private void register() {

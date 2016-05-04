@@ -1,10 +1,18 @@
 itemGroup.tuttab=§6Tutorial Tab§r
 
 item.tutitem.name=§5Tutorial Item§r
+
 tile.tutblock.name=§5Tutorial Block§r
+
 item.tutfood.name=§5Tutorial Food§r
+
 item.tutsword.name=§5Tutorial Sword§r
 item.tutaxe.name=§5Tutorial Axe§r
 item.tutpickaxe.name=§5Tutorial Pickaxe§r
 item.tutshovel.name=§5Tutorial Shovel§r
 item.tuthoe.name=§5Tutorial Hoe§r
+
+item.tuthelmet.name=§5Tutorial Helmet§r
+item.tutchestplate.name=§5Tutorial Chestplate§r
+item.tutleggings.name=§5Tutorial Leggings§r
+item.tutboots.name=§5Tutorial Boots§r

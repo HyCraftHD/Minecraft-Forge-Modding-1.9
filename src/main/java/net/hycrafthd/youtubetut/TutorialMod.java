@@ -1,7 +1,9 @@
 package net.hycrafthd.youtubetut;
 
 import net.hycrafthd.youtubetut.creativetab.CreativeTabTut;
+import net.hycrafthd.youtubetut.handler.TutorialFuelHandler;
 import net.hycrafthd.youtubetut.proxy.CommonProxy;
+import net.hycrafthd.youtubetut.world.TutorialWorldgeneration;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -10,6 +12,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = TutorialMod.MODID, version = TutorialMod.VERSION)
 public class TutorialMod {
@@ -39,6 +42,8 @@ public class TutorialMod {
 		new TutorialBlocks();
 		crafting = new TutorialCrafting();
 		smelting = new TutorialSmelting();
+		GameRegistry.registerWorldGenerator(new TutorialWorldgeneration(), 0);
+		GameRegistry.registerFuelHandler(new TutorialFuelHandler());
 	}
 
 	@EventHandler

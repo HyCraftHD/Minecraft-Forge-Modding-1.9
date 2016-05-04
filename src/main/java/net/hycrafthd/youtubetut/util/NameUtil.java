@@ -1,9 +1,9 @@
-package net.hycrafthd.youtubetut;
+package net.hycrafthd.youtubetut.util;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
-public class TutorialUtils {
+public class NameUtil {
 
 	public static void setNames(Object obj, String name) {
 		if (obj instanceof Block) {

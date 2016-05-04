@@ -12,12 +12,19 @@ public class ClientProxy extends CommonProxy {
 
 	public void registerModels() {
 		registerItemModel(TutorialItems.tutitem, 0);
+
 		registerItemModel(TutorialItems.tutfood, 0);
+
 		registerItemModel(TutorialItems.tutsword, 0);
 		registerItemModel(TutorialItems.tutaxe, 0);
 		registerItemModel(TutorialItems.tutpickaxe, 0);
 		registerItemModel(TutorialItems.tutshovel, 0);
 		registerItemModel(TutorialItems.tuthoe, 0);
+
+		registerItemModel(TutorialItems.tuthelmet, 0);
+		registerItemModel(TutorialItems.tutchestplate, 0);
+		registerItemModel(TutorialItems.tutleggings, 0);
+		registerItemModel(TutorialItems.tutboots, 0);
 
 		registerBlockModel(TutorialBlocks.tutblock, 0);
 	}
