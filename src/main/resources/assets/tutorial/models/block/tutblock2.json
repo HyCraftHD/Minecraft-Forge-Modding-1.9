@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end": "tutorial:blocks/tutblock",
+        "side": "tutorial:blocks/tutblock2"
+    }
+}

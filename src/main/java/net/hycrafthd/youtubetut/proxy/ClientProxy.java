@@ -27,6 +27,7 @@ public class ClientProxy extends CommonProxy {
 		registerItemModel(TutorialItems.tutboots, 0);
 
 		registerBlockModel(TutorialBlocks.tutblock, 0);
+		registerBlockModel(TutorialBlocks.tutblock2, 0);
 	}
 
 	private void registerItemModel(Item item, int meta) {

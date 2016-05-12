@@ -1,8 +1,9 @@
 itemGroup.tuttab=§6Tutorial Tab§r
 
-item.tutitem.name=§5Tutorial Item§r
-
 tile.tutblock.name=§5Tutorial Block§r
+tile.tutblock2.name=§5Tutorial Block2§r
+
+item.tutitem.name=§5Tutorial Item§r
 
 item.tutfood.name=§5Tutorial Food§r
 
@@ -16,3 +17,9 @@ item.tuthelmet.name=§5Tutorial Helmet§r
 item.tutchestplate.name=§5Tutorial Chestplate§r
 item.tutleggings.name=§5Tutorial Leggings§r
 item.tutboots.name=§5Tutorial Boots§r
+
+achievement.tutjoin=Join
+achievement.tutjoin.desc=Join the Minecraft world
+
+achievement.tutuseitem=Fly
+achievement.tutuseitem.desc=Use tut item
