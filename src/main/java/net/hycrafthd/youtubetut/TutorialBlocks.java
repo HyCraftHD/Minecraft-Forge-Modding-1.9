@@ -25,8 +25,8 @@ public class TutorialBlocks {
 	}
 
 	private void register() {
-		this.registerBlock(tutblock);
-		this.registerBlock(tutblock2);
+		registerBlock(tutblock);
+		registerBlock(tutblock2);
 	}
 
 	private void registerBlock(Block block) {

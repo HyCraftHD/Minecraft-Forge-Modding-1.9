@@ -1,0 +1,10 @@
+{
+    "greeting": {
+        "category": "voice",
+        "sounds": [
+            "tutorial:greeting"
+        ],
+        "subtitle": "subtitles.greeting"
+    }
+    
+}

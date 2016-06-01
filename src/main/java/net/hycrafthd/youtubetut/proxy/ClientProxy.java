@@ -11,31 +11,36 @@ import net.minecraft.item.Item;
 public class ClientProxy extends CommonProxy {
 
 	public void registerModels() {
-		registerItemModel(TutorialItems.tutitem, 0);
+		registerModel(TutorialItems.tutitem, 0);
 
-		registerItemModel(TutorialItems.tutfood, 0);
+		registerModel(TutorialItems.tutfood, 0);
 
-		registerItemModel(TutorialItems.tutsword, 0);
-		registerItemModel(TutorialItems.tutaxe, 0);
-		registerItemModel(TutorialItems.tutpickaxe, 0);
-		registerItemModel(TutorialItems.tutshovel, 0);
-		registerItemModel(TutorialItems.tuthoe, 0);
+		registerModel(TutorialItems.tutsword, 0);
+		registerModel(TutorialItems.tutaxe, 0);
+		registerModel(TutorialItems.tutpickaxe, 0);
+		registerModel(TutorialItems.tutshovel, 0);
+		registerModel(TutorialItems.tuthoe, 0);
 
-		registerItemModel(TutorialItems.tuthelmet, 0);
-		registerItemModel(TutorialItems.tutchestplate, 0);
-		registerItemModel(TutorialItems.tutleggings, 0);
-		registerItemModel(TutorialItems.tutboots, 0);
+		registerModel(TutorialItems.tuthelmet, 0);
+		registerModel(TutorialItems.tutchestplate, 0);
+		registerModel(TutorialItems.tutleggings, 0);
+		registerModel(TutorialItems.tutboots, 0);
 
-		registerBlockModel(TutorialBlocks.tutblock, 0);
-		registerBlockModel(TutorialBlocks.tutblock2, 0);
+		registerModel(TutorialBlocks.tutblock, 0);
+		registerModel(TutorialBlocks.tutblock2, 0);
 	}
 
-	private void registerItemModel(Item item, int meta) {
+	private void registerModel(Object obj, int meta) {
+
+		Item item;
+		if (obj instanceof Item) {
+			item = (Item) obj;
+		} else if (obj instanceof Block) {
+			item = Item.getItemFromBlock((Block) obj);
+		} else {
+			throw new IllegalArgumentException("Only item and block instances");
+		}
 		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(TutorialMod.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
-	}
-
-	private void registerBlockModel(Block block, int meta) {
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResourceLocation(TutorialMod.MODID + ":" + block.getUnlocalizedName().substring(5), "inventory"));
 	}
 
 }

@@ -1,6 +1,7 @@
 package net.hycrafthd.youtubetut.item;
 
 import net.hycrafthd.youtubetut.TutorialAchievements;
+import net.hycrafthd.youtubetut.TutorialSounds;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -22,6 +23,7 @@ public class ItemTut extends Item {
 		playerIn.fallDistance = 0.0F;
 		itemStackIn.damageItem(1, playerIn);
 		playerIn.addStat(TutorialAchievements.tutuseitem);
+		playerIn.playSound(TutorialSounds.greeting, 1.0F, 1.0F);
 		return super.onItemRightClick(itemStackIn, worldIn, playerIn, hand);
 	}
 

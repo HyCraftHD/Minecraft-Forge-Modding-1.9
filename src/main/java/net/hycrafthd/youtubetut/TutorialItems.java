@@ -9,6 +9,7 @@ import net.hycrafthd.youtubetut.item.ItemTutPickaxe;
 import net.hycrafthd.youtubetut.item.ItemTutSpade;
 import net.hycrafthd.youtubetut.item.ItemTutSword;
 import net.hycrafthd.youtubetut.util.NameUtil;
+import net.minecraft.block.Block;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -75,17 +76,21 @@ public class TutorialItems {
 	}
 
 	private void register() {
-		GameRegistry.register(tutitem);
-		GameRegistry.register(tutfood);
-		GameRegistry.register(tutsword);
-		GameRegistry.register(tutaxe);
-		GameRegistry.register(tutpickaxe);
-		GameRegistry.register(tutshovel);
-		GameRegistry.register(tuthoe);
-		GameRegistry.register(tuthelmet);
-		GameRegistry.register(tutchestplate);
-		GameRegistry.register(tutleggings);
-		GameRegistry.register(tutboots);
+		registerItem(tutitem);
+		registerItem(tutfood);
+		registerItem(tutsword);
+		registerItem(tutaxe);
+		registerItem(tutpickaxe);
+		registerItem(tutshovel);
+		registerItem(tuthoe);
+		registerItem(tuthelmet);
+		registerItem(tutchestplate);
+		registerItem(tutleggings);
+		registerItem(tutboots);
+	}
+
+	private void registerItem(Item item) {
+		GameRegistry.register(item);
 	}
 
 }

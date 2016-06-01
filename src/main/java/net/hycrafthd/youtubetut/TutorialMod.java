@@ -28,31 +28,41 @@ public class TutorialMod {
 	@SidedProxy(serverSide = "net.hycrafthd.youtubetut.proxy.CommonProxy", clientSide = "net.hycrafthd.youtubetut.proxy.ClientProxy", modId = MODID)
 	public static CommonProxy PROXY = new CommonProxy();
 
+	public static CreativeTabs tab;
+
+	private TutorialItems items;
+	private TutorialBlocks blocks;
+	private TutorialSounds sounds;
+
 	private TutorialCrafting crafting;
 	private TutorialSmelting smelting;
 
-	public static CreativeTabs tab;
+	private TutorialAchievements achievements;
 
 	@EventHandler
 	public void preinit(FMLPreInitializationEvent event) {
+		tab = new CreativeTabTut();
+		items = new TutorialItems();
+		blocks = new TutorialBlocks();
+		sounds = new TutorialSounds();
 	}
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
-		tab = new CreativeTabTut();
-		new TutorialItems();
-		new TutorialBlocks();
-		crafting = new TutorialCrafting();
-		smelting = new TutorialSmelting();
 		GameRegistry.registerWorldGenerator(new TutorialWorldgeneration(), 0);
 		GameRegistry.registerFuelHandler(new TutorialFuelHandler());
 		MinecraftForge.EVENT_BUS.register(new TutorialEventHandler());
-		new TutorialAchievements();
+
+		crafting = new TutorialCrafting();
+		smelting = new TutorialSmelting();
+
+		achievements = new TutorialAchievements();
 	}
 
 	@EventHandler
 	public void postinit(FMLPostInitializationEvent event) {
 		PROXY.registerModels();
+
 		crafting.unregister();
 		smelting.unregister();
 	}
