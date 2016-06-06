@@ -3,13 +3,13 @@ package net.hycrafthd.youtubetut;
 import net.hycrafthd.youtubetut.item.ItemTut;
 import net.hycrafthd.youtubetut.item.ItemTutArmor;
 import net.hycrafthd.youtubetut.item.ItemTutAxe;
+import net.hycrafthd.youtubetut.item.ItemTutBow;
 import net.hycrafthd.youtubetut.item.ItemTutFood;
 import net.hycrafthd.youtubetut.item.ItemTutHoe;
 import net.hycrafthd.youtubetut.item.ItemTutPickaxe;
 import net.hycrafthd.youtubetut.item.ItemTutSpade;
 import net.hycrafthd.youtubetut.item.ItemTutSword;
 import net.hycrafthd.youtubetut.util.NameUtil;
-import net.minecraft.block.Block;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -31,6 +31,8 @@ public class TutorialItems {
 	public static Item tutpickaxe;
 	public static Item tutshovel;
 	public static Item tuthoe;
+
+	public static Item tutbow;
 
 	public static Item tuthelmet;
 	public static Item tutchestplate;
@@ -64,6 +66,9 @@ public class TutorialItems {
 		tuthoe = new ItemTutHoe(tuttoolmaterial).setCreativeTab(TutorialMod.tab);
 		NameUtil.setNames(tuthoe, "tuthoe");
 
+		tutbow = new ItemTutBow().setCreativeTab(TutorialMod.tab);
+		NameUtil.setNames(tutbow, "tutbow");
+
 		tuthelmet = new ItemTutArmor(tutarmormaterial, EntityEquipmentSlot.HEAD);
 		NameUtil.setNames(tuthelmet, "tuthelmet");
 		tutchestplate = new ItemTutArmor(tutarmormaterial, EntityEquipmentSlot.CHEST);
@@ -78,11 +83,14 @@ public class TutorialItems {
 	private void register() {
 		registerItem(tutitem);
 		registerItem(tutfood);
+
 		registerItem(tutsword);
 		registerItem(tutaxe);
 		registerItem(tutpickaxe);
 		registerItem(tutshovel);
 		registerItem(tuthoe);
+		registerItem(tutbow);
+
 		registerItem(tuthelmet);
 		registerItem(tutchestplate);
 		registerItem(tutleggings);

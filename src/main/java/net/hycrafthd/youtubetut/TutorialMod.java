@@ -7,6 +7,7 @@ import net.hycrafthd.youtubetut.proxy.CommonProxy;
 import net.hycrafthd.youtubetut.world.TutorialWorldgeneration;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -30,6 +31,7 @@ public class TutorialMod {
 
 	public static CreativeTabs tab;
 
+	private TutorialConfig config;
 	private TutorialItems items;
 	private TutorialBlocks blocks;
 	private TutorialSounds sounds;
@@ -41,6 +43,7 @@ public class TutorialMod {
 
 	@EventHandler
 	public void preinit(FMLPreInitializationEvent event) {
+		config = new TutorialConfig(event.getSuggestedConfigurationFile());
 		tab = new CreativeTabTut();
 		items = new TutorialItems();
 		blocks = new TutorialBlocks();

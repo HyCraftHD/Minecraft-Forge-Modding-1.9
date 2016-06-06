@@ -5,8 +5,10 @@ import net.hycrafthd.youtubetut.TutorialItems;
 import net.hycrafthd.youtubetut.TutorialMod;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
 
 public class ClientProxy extends CommonProxy {
 
@@ -20,6 +22,8 @@ public class ClientProxy extends CommonProxy {
 		registerModel(TutorialItems.tutpickaxe, 0);
 		registerModel(TutorialItems.tutshovel, 0);
 		registerModel(TutorialItems.tuthoe, 0);
+
+		registerModel(TutorialItems.tutbow, 0);
 
 		registerModel(TutorialItems.tuthelmet, 0);
 		registerModel(TutorialItems.tutchestplate, 0);
@@ -40,7 +44,7 @@ public class ClientProxy extends CommonProxy {
 		} else {
 			throw new IllegalArgumentException("Only item and block instances");
 		}
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(TutorialMod.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta, new ModelResourceLocation(item.getRegistryName(), "inventory"));
 	}
 
 }
