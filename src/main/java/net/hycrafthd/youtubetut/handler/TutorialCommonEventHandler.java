@@ -11,7 +11,7 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 
-public class TutorialEventHandler {
+public class TutorialCommonEventHandler {
 
 	@SubscribeEvent
 	public void onPlayerJoin(PlayerLoggedInEvent event) {

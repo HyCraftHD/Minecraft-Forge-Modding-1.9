@@ -1,13 +1,10 @@
 package net.hycrafthd.youtubetut;
 
 import net.hycrafthd.youtubetut.creativetab.CreativeTabTut;
-import net.hycrafthd.youtubetut.handler.TutorialEventHandler;
 import net.hycrafthd.youtubetut.handler.TutorialFuelHandler;
 import net.hycrafthd.youtubetut.proxy.CommonProxy;
 import net.hycrafthd.youtubetut.world.TutorialWorldgeneration;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -54,7 +51,8 @@ public class TutorialMod {
 	public void init(FMLInitializationEvent event) {
 		GameRegistry.registerWorldGenerator(new TutorialWorldgeneration(), 0);
 		GameRegistry.registerFuelHandler(new TutorialFuelHandler());
-		MinecraftForge.EVENT_BUS.register(new TutorialEventHandler());
+
+		PROXY.registerEventHandler();
 
 		crafting = new TutorialCrafting();
 		smelting = new TutorialSmelting();

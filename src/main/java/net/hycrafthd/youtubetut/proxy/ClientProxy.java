@@ -3,13 +3,19 @@ package net.hycrafthd.youtubetut.proxy;
 import net.hycrafthd.youtubetut.TutorialBlocks;
 import net.hycrafthd.youtubetut.TutorialItems;
 import net.hycrafthd.youtubetut.TutorialMod;
+import net.hycrafthd.youtubetut.handler.TutorialClientEventHandler;
+import net.hycrafthd.youtubetut.handler.TutorialCommonEventHandler;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
+@SideOnly(Side.CLIENT)
 public class ClientProxy extends CommonProxy {
 
 	public void registerModels() {
@@ -32,6 +38,11 @@ public class ClientProxy extends CommonProxy {
 
 		registerModel(TutorialBlocks.tutblock, 0);
 		registerModel(TutorialBlocks.tutblock2, 0);
+	}
+
+	public void registerEventHandler() {
+		MinecraftForge.EVENT_BUS.register(new TutorialClientEventHandler());
+		super.registerEventHandler();
 	}
 
 	private void registerModel(Object obj, int meta) {
