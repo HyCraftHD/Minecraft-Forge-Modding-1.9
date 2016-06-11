@@ -2,16 +2,18 @@ package net.hycrafthd.youtubetut.proxy;
 
 import net.hycrafthd.youtubetut.TutorialBlocks;
 import net.hycrafthd.youtubetut.TutorialItems;
-import net.hycrafthd.youtubetut.TutorialMod;
+import net.hycrafthd.youtubetut.entity.EntityTutArrow;
+import net.hycrafthd.youtubetut.entity.render.RenderTutArrow;
 import net.hycrafthd.youtubetut.handler.TutorialClientEventHandler;
-import net.hycrafthd.youtubetut.handler.TutorialCommonEventHandler;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.entity.Render;
+import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.client.registry.IRenderFactory;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -30,6 +32,7 @@ public class ClientProxy extends CommonProxy {
 		registerModel(TutorialItems.tuthoe, 0);
 
 		registerModel(TutorialItems.tutbow, 0);
+		registerModel(TutorialItems.tutarrow, 0);
 
 		registerModel(TutorialItems.tuthelmet, 0);
 		registerModel(TutorialItems.tutchestplate, 0);
@@ -38,6 +41,15 @@ public class ClientProxy extends CommonProxy {
 
 		registerModel(TutorialBlocks.tutblock, 0);
 		registerModel(TutorialBlocks.tutblock2, 0);
+	}
+
+	public void registerRenderer() {
+		RenderingRegistry.registerEntityRenderingHandler(EntityTutArrow.class, new IRenderFactory() {
+			@Override
+			public Render createRenderFor(RenderManager manager) {
+				return new RenderTutArrow(manager);
+			}
+		});
 	}
 
 	public void registerEventHandler() {

@@ -33,6 +33,7 @@ public class TutorialMod {
 	private TutorialBlocks blocks;
 	private TutorialSounds sounds;
 
+	private TutorialEntity entity;
 	private TutorialCrafting crafting;
 	private TutorialSmelting smelting;
 
@@ -45,6 +46,7 @@ public class TutorialMod {
 		items = new TutorialItems();
 		blocks = new TutorialBlocks();
 		sounds = new TutorialSounds();
+		PROXY.registerRenderer();
 	}
 
 	@EventHandler
@@ -54,6 +56,7 @@ public class TutorialMod {
 
 		PROXY.registerEventHandler();
 
+		entity = new TutorialEntity();
 		crafting = new TutorialCrafting();
 		smelting = new TutorialSmelting();
 

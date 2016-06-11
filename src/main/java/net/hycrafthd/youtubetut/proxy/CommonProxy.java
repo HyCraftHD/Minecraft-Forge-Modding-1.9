@@ -9,6 +9,10 @@ public class CommonProxy {
 	public void registerModels() {
 	}
 
+	// Client Stuff
+	public void registerRenderer() {
+	}
+
 	public void registerEventHandler() {
 		MinecraftForge.EVENT_BUS.register(new TutorialCommonEventHandler());
 	}

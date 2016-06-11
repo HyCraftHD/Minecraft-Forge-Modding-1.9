@@ -2,6 +2,7 @@ package net.hycrafthd.youtubetut;
 
 import net.hycrafthd.youtubetut.item.ItemTut;
 import net.hycrafthd.youtubetut.item.ItemTutArmor;
+import net.hycrafthd.youtubetut.item.ItemTutArrow;
 import net.hycrafthd.youtubetut.item.ItemTutAxe;
 import net.hycrafthd.youtubetut.item.ItemTutBow;
 import net.hycrafthd.youtubetut.item.ItemTutFood;
@@ -33,6 +34,7 @@ public class TutorialItems {
 	public static Item tuthoe;
 
 	public static Item tutbow;
+	public static Item tutarrow;
 
 	public static Item tuthelmet;
 	public static Item tutchestplate;
@@ -68,6 +70,8 @@ public class TutorialItems {
 
 		tutbow = new ItemTutBow().setCreativeTab(TutorialMod.tab);
 		NameUtil.setNames(tutbow, "tutbow");
+		tutarrow = new ItemTutArrow().setCreativeTab(TutorialMod.tab);
+		NameUtil.setNames(tutarrow, "tutarrow");
 
 		tuthelmet = new ItemTutArmor(tutarmormaterial, EntityEquipmentSlot.HEAD);
 		NameUtil.setNames(tuthelmet, "tuthelmet");
@@ -89,7 +93,9 @@ public class TutorialItems {
 		registerItem(tutpickaxe);
 		registerItem(tutshovel);
 		registerItem(tuthoe);
+
 		registerItem(tutbow);
+		registerItem(tutarrow);
 
 		registerItem(tuthelmet);
 		registerItem(tutchestplate);
