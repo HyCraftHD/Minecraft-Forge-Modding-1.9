@@ -3,6 +3,7 @@ package net.hycrafthd.youtubetut.proxy;
 import net.hycrafthd.youtubetut.TutorialBlocks;
 import net.hycrafthd.youtubetut.TutorialItems;
 import net.hycrafthd.youtubetut.entity.EntityTutArrow;
+import net.hycrafthd.youtubetut.entity.EntityTutGrenade;
 import net.hycrafthd.youtubetut.entity.render.RenderTutArrow;
 import net.hycrafthd.youtubetut.handler.TutorialClientEventHandler;
 import net.minecraft.block.Block;
@@ -10,6 +11,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.IRenderFactory;
@@ -39,6 +41,8 @@ public class ClientProxy extends CommonProxy {
 		registerModel(TutorialItems.tutleggings, 0);
 		registerModel(TutorialItems.tutboots, 0);
 
+		registerModel(TutorialItems.tutgrenade, 0);
+
 		registerModel(TutorialBlocks.tutblock, 0);
 		registerModel(TutorialBlocks.tutblock2, 0);
 	}
@@ -48,6 +52,12 @@ public class ClientProxy extends CommonProxy {
 			@Override
 			public Render createRenderFor(RenderManager manager) {
 				return new RenderTutArrow(manager);
+			}
+		});
+		RenderingRegistry.registerEntityRenderingHandler(EntityTutGrenade.class, new IRenderFactory() {
+			@Override
+			public Render createRenderFor(RenderManager manager) {
+				return new RenderSnowball<EntityTutGrenade>(manager, TutorialItems.tutgrenade, Minecraft.getMinecraft().getRenderItem());
 			}
 		});
 	}

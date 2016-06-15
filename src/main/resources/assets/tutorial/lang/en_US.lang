@@ -14,11 +14,14 @@ item.tutshovel.name=§5Tutorial Shovel§r
 item.tuthoe.name=§5Tutorial Hoe§r
 
 item.tutbow.name=§5Tutorial Bow§r
+item.tutarrow.name=§5Tutorial Arrow§r
 
 item.tuthelmet.name=§5Tutorial Helmet§r
 item.tutchestplate.name=§5Tutorial Chestplate§r
 item.tutleggings.name=§5Tutorial Leggings§r
 item.tutboots.name=§5Tutorial Boots§r
+
+item.tutgrenade.name=§5Tutorial Grenade§r
 
 achievement.tutjoin=Join
 achievement.tutjoin.desc=Join the Minecraft world
