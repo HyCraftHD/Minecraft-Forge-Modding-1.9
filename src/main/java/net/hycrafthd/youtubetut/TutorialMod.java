@@ -2,6 +2,7 @@ package net.hycrafthd.youtubetut;
 
 import net.hycrafthd.youtubetut.creativetab.CreativeTabTut;
 import net.hycrafthd.youtubetut.handler.TutorialFuelHandler;
+import net.hycrafthd.youtubetut.handler.TutorialGuiHandler;
 import net.hycrafthd.youtubetut.proxy.CommonProxy;
 import net.hycrafthd.youtubetut.world.TutorialWorldgeneration;
 import net.minecraft.creativetab.CreativeTabs;
@@ -12,6 +13,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = TutorialMod.MODID, version = TutorialMod.VERSION)
@@ -25,7 +27,7 @@ public class TutorialMod {
 
 	@SidedProxy(serverSide = "net.hycrafthd.youtubetut.proxy.CommonProxy", clientSide = "net.hycrafthd.youtubetut.proxy.ClientProxy", modId = MODID)
 	public static CommonProxy PROXY = new CommonProxy();
-
+	
 	public static CreativeTabs tab;
 
 	private TutorialConfig config;
@@ -53,6 +55,7 @@ public class TutorialMod {
 	public void init(FMLInitializationEvent event) {
 		GameRegistry.registerWorldGenerator(new TutorialWorldgeneration(), 0);
 		GameRegistry.registerFuelHandler(new TutorialFuelHandler());
+		NetworkRegistry.INSTANCE.registerGuiHandler(INSTANCE, new TutorialGuiHandler());
 
 		PROXY.registerEventHandler();
 
