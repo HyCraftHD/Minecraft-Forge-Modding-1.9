@@ -1,16 +1,6 @@
 package net.hycrafthd.youtubetut;
 
-import net.hycrafthd.youtubetut.item.ItemTut;
-import net.hycrafthd.youtubetut.item.ItemTutArmor;
-import net.hycrafthd.youtubetut.item.ItemTutArrow;
-import net.hycrafthd.youtubetut.item.ItemTutAxe;
-import net.hycrafthd.youtubetut.item.ItemTutBow;
-import net.hycrafthd.youtubetut.item.ItemTutFood;
-import net.hycrafthd.youtubetut.item.ItemTutGrenade;
-import net.hycrafthd.youtubetut.item.ItemTutHoe;
-import net.hycrafthd.youtubetut.item.ItemTutPickaxe;
-import net.hycrafthd.youtubetut.item.ItemTutSpade;
-import net.hycrafthd.youtubetut.item.ItemTutSword;
+import net.hycrafthd.youtubetut.item.*;
 import net.hycrafthd.youtubetut.util.NameUtil;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.EntityEquipmentSlot;

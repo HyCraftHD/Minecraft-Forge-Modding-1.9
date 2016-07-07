@@ -1,18 +1,13 @@
 package net.hycrafthd.youtubetut;
 
 import net.hycrafthd.youtubetut.creativetab.CreativeTabTut;
-import net.hycrafthd.youtubetut.handler.TutorialFuelHandler;
-import net.hycrafthd.youtubetut.handler.TutorialGuiHandler;
+import net.hycrafthd.youtubetut.handler.*;
 import net.hycrafthd.youtubetut.proxy.CommonProxy;
 import net.hycrafthd.youtubetut.world.TutorialWorldgeneration;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.Mod.Instance;
-import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.*;
+import net.minecraftforge.fml.common.Mod.*;
+import net.minecraftforge.fml.common.event.*;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -27,18 +22,24 @@ public class TutorialMod {
 
 	@SidedProxy(serverSide = "net.hycrafthd.youtubetut.proxy.CommonProxy", clientSide = "net.hycrafthd.youtubetut.proxy.ClientProxy", modId = MODID)
 	public static CommonProxy PROXY = new CommonProxy();
-	
+
 	public static CreativeTabs tab;
 
+	@SuppressWarnings("unused")
 	private TutorialConfig config;
+	@SuppressWarnings("unused")
 	private TutorialItems items;
+	@SuppressWarnings("unused")
 	private TutorialBlocks blocks;
+	@SuppressWarnings("unused")
 	private TutorialSounds sounds;
 
+	@SuppressWarnings("unused")
 	private TutorialEntity entity;
 	private TutorialCrafting crafting;
 	private TutorialSmelting smelting;
 
+	@SuppressWarnings("unused")
 	private TutorialAchievements achievements;
 
 	@EventHandler

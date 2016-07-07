@@ -1,7 +1,6 @@
 package net.hycrafthd.youtubetut;
 
-import net.hycrafthd.youtubetut.entity.EntityTutArrow;
-import net.hycrafthd.youtubetut.entity.EntityTutGrenade;
+import net.hycrafthd.youtubetut.entity.*;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class TutorialEntity {

@@ -3,10 +3,8 @@ package net.hycrafthd.youtubetut;
 import java.util.Iterator;
 import java.util.Map.Entry;
 
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.init.*;
+import net.minecraft.item.*;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -22,9 +20,9 @@ public class TutorialSmelting {
 	}
 
 	public void unregister() {
-		Iterator recipes = FurnaceRecipes.instance().getSmeltingList().entrySet().iterator();
+		Iterator<?> recipes = FurnaceRecipes.instance().getSmeltingList().entrySet().iterator();
 		while (recipes.hasNext()) {
-			Entry entry = (Entry) recipes.next();
+			Entry<?, ?> entry = (Entry<?, ?>) recipes.next();
 			ItemStack input = (ItemStack) entry.getKey();
 			ItemStack output = (ItemStack) entry.getValue();
 			if (input != null && input.getItem() != null) {

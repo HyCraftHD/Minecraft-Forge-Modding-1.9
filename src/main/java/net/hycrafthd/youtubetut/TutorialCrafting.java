@@ -1,19 +1,13 @@
 package net.hycrafthd.youtubetut;
 
-import java.util.Iterator;
-import java.util.UUID;
+import java.util.*;
 
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Enchantments;
-import net.minecraft.init.Items;
+import net.minecraft.init.*;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.CraftingManager;
-import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.item.crafting.*;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class TutorialCrafting {
@@ -37,7 +31,7 @@ public class TutorialCrafting {
 	}
 
 	public void unregister() {
-		Iterator recipes = CraftingManager.getInstance().getRecipeList().iterator();
+		Iterator<?> recipes = CraftingManager.getInstance().getRecipeList().iterator();
 		while (recipes.hasNext()) {
 			ItemStack output = ((IRecipe) recipes.next()).getRecipeOutput();
 			if (output != null && output.getItem() != null) {

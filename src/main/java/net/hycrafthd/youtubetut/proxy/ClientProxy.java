@@ -1,23 +1,17 @@
 package net.hycrafthd.youtubetut.proxy;
 
-import net.hycrafthd.youtubetut.TutorialBlocks;
-import net.hycrafthd.youtubetut.TutorialItems;
-import net.hycrafthd.youtubetut.entity.EntityTutArrow;
-import net.hycrafthd.youtubetut.entity.EntityTutGrenade;
+import net.hycrafthd.youtubetut.*;
+import net.hycrafthd.youtubetut.entity.*;
 import net.hycrafthd.youtubetut.entity.render.RenderTutArrow;
 import net.hycrafthd.youtubetut.handler.TutorialClientEventHandler;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.client.renderer.entity.Render;
-import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.client.renderer.entity.RenderSnowball;
+import net.minecraft.client.renderer.entity.*;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.client.registry.IRenderFactory;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.client.registry.*;
+import net.minecraftforge.fml.relauncher.*;
 
 @SideOnly(Side.CLIENT)
 public class ClientProxy extends CommonProxy {

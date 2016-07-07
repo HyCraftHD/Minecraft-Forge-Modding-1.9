@@ -1,11 +1,7 @@
 package net.hycrafthd.youtubetut.handler;
 
-import net.hycrafthd.youtubetut.TutorialAchievements;
-import net.hycrafthd.youtubetut.TutorialConfig;
-import net.hycrafthd.youtubetut.TutorialMod;
-import net.hycrafthd.youtubetut.TutorialSounds;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.player.EntityPlayerMP;
+import net.hycrafthd.youtubetut.*;
+import net.minecraft.entity.player.*;
 import net.minecraft.network.play.server.SPacketCustomSound;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;

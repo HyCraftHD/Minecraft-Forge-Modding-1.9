@@ -1,7 +1,6 @@
 package net.hycrafthd.youtubetut;
 
-import net.hycrafthd.youtubetut.block.BlockTut;
-import net.hycrafthd.youtubetut.block.BlockTut2;
+import net.hycrafthd.youtubetut.block.*;
 import net.hycrafthd.youtubetut.util.NameUtil;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;

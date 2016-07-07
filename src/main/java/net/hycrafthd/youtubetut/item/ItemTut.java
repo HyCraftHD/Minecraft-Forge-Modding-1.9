@@ -1,13 +1,9 @@
 package net.hycrafthd.youtubetut.item;
 
-import net.hycrafthd.youtubetut.TutorialAchievements;
-import net.hycrafthd.youtubetut.TutorialConfig;
-import net.hycrafthd.youtubetut.TutorialSounds;
+import net.hycrafthd.youtubetut.*;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.EnumHand;
+import net.minecraft.item.*;
+import net.minecraft.util.*;
 import net.minecraft.world.World;
 
 public class ItemTut extends Item {

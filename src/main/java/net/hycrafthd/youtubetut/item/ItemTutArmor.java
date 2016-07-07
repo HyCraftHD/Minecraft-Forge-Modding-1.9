@@ -3,9 +3,7 @@ package net.hycrafthd.youtubetut.item;
 import net.hycrafthd.youtubetut.TutorialMod;
 import net.minecraft.entity.Entity;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 
 public class ItemTutArmor extends ItemArmor {
 

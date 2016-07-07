@@ -2,13 +2,9 @@ package net.hycrafthd.youtubetut.entity.render;
 
 import net.hycrafthd.youtubetut.TutorialMod;
 import net.hycrafthd.youtubetut.entity.EntityTutArrow;
-import net.minecraft.client.renderer.entity.RenderArrow;
-import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.entity.projectile.EntitySpectralArrow;
+import net.minecraft.client.renderer.entity.*;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
-import scala.sys.process.processInternal;
+import net.minecraftforge.fml.relauncher.*;
 
 @SideOnly(Side.CLIENT)
 public class RenderTutArrow extends RenderArrow<EntityTutArrow> {
